@@ -1,0 +1,37 @@
+{
+  "name": "burger-finder-app",
+  "version": "0.0.1",
+  "description": "Aplicacion web que facilita la reservacion a un restaurante",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/burguerFinder/burgerFinder-app.git"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "materialize",
+    "fetch",
+    "promises",
+    "jquery",
+    "github"
+  ],
+  "author": "Ilse, Lexa\u001b[D\u001b[D\u001b[D\u001b[DJosh, Lexa, Nash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/burguerFinder/burgerFinder-app/issues"
+  },
+  "homepage": "https://github.com/burguerFinder/burgerFinder-app#readme",
+  "dependencies": {
+    "express": "^4.15.4"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
