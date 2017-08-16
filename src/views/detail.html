@@ -16,47 +16,47 @@
 	</head>
 	<body>
 
-		<header>
-			<nav>
-				<div class="nav-wrapper">
-					<h6 class="black-text"><strong>BurgerFinder</strong></h6>
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<h6 class="black-text"><strong>BurgerFinder</strong></h6>
+			</div>
+		</nav>
+	</header>
+	<div class="map">
+		<p class="map__span center-align"><img src="../img/icon_hambur.png" alt="icon_hamb" class="responsive-img map__span--img">8.0</p>
+	</div>
+	<section class="container">
+		<div class="row">
+			<div class="col s7">
+				<h6 id="name"></h6>
+				<div class="valign-wrapper">
+					<img src="../img/arrow.png" alt="arrow" class="responsive-img">
+					<p><small><span id="distance"></span> km away </small> &nbsp;<a href="#" id="get-direction"> Get directions</a></p>
 				</div>
-			</nav>
-		</header>
-		<div class="map">
-			<p class="map__span center-align"><img src="../img/icon_hambur.png" alt="icon_hamb" class="responsive-img map__span--img">8.0</p>
+			</div>
+
+			<div class="col s5 m2">
+				<p><img src="../img/person.png" alt="person" class="responsive-img"><span id="seats"></span></p>
+				<p><small>Seats available</small></p>
+			</div>
+
+			<div class="col m3">
+				<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-down" href="#modal1">Reserve Seats</a>
+			</div>
 		</div>
-		<section class="container">
-			<div class="row">
-				<div class="col s7">
-					<h6 id="name"></h6>
-					<div class="valign-wrapper">
-						<img src="../img/arrow.png" alt="arrow" class="responsive-img">
-						<p><small><span id="distance"></span> km away </small> &nbsp;<a href="#" id="get-direction"> Get directions</a></p>
-					</div>
-				</div>
 
-				<div class="col s5 m2">
-					<p><img src="../img/person.png" alt="person" class="responsive-img"><span id="seats"></span></p>
-					<p><small>Seats available</small></p>
-				</div>
-
-				<div class="col m3">
-					<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-down" href="#modal1">Reserve Seats</a>
-				</div>
+		<div class="row">
+			<div class="col s10 offset-s1">
+				<p id="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, doloribus qui ullam necessitatibus deleniti architecto odit eum ad tempora, vitae porro assumenda magni. Voluptatem cum assumenda deleniti nostrum voluptas.</p>
 			</div>
+		</div>
 
-			<div class="row">
-				<div class="col s10 offset-s1">
-					<p id="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, doloribus qui ullam necessitatibus deleniti architecto odit eum ad tempora, vitae porro assumenda magni. Voluptatem cum assumenda deleniti nostrum voluptas.</p>
-				</div>
+		<div class="row">
+			<div class="col s8 offset-s2">
+				<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-up" id="reservation" href="#modal1">Reserve Seats</a>
 			</div>
-
-			<div class="row">
-				<div class="col s8 offset-s2">
-					<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-up" id="reservation" href="#modal1">Reserve Seats</a>
-				</div>
-			</div>
+		</div>
 	</section>
 
 	<!-- Modal reservation -->
@@ -65,62 +65,69 @@
 			<div class="container">
 				<div class="row">
 					<div class="right-align">
-			      <span class="modal-close">X</span>
-			    </div>
-				</div>
-				<div class="row">
-			    <p>You are booking at</p>
-			    <h6 id="formRestaurant"><strong>HipsterCafegtería</strong></h6>
-			    <div class="valign-wrapper">
-			      <img src="../img/arrow.png" alt="arrow">
-			      <p><small><span id="formDistance"></span> km away</small></p>
-			      <img src="../img/ranking.png" alt="raking">
-			      <p><small>8.0 Rating</small></p>
-			    </div>
-				</div>
-				</div>
-				<hr>
-				<div class="container">
-					<div class="row">
-            <form id="reservationForm" type="submit">
-						<h5>When?</h5>
-						<div class="input-field col s6 m12">
-	              <input type="text" class="datepicker" id="reservationDay" required>
-								<label for="reservationDay">Day</label>
-	          </div>
-						<div class="input-field col s6 m12">
-	              <input type="text" class="timepicker" id="reservationHour" required>
-								<label for="reservationHour">Hour</label>
-	          </div>
-						<div class="input-field col s6 m12">
-							<input type="number" id="userSeats">
-							<label for="userSeats">How many seats?</label>
-	          </div>
-	        </div>
-				</div>
-				<hr>
-				<div class="container">
-					<div class="row">
-					  <h5>Who?</h5>
-						<div class="input-field col s6 m12">
-							<input type="text" id="userName" name="name" value="">
-							<label for="userName">Name</label>
-	          </div>
-						<div class="input-field col s6 m12">
-							<input type="email" id="userEmail" name="email" value="">
-						  <label for="userEmail">Email</label>
-	          </div>
-						<div class="input-field col s6 m12">
-							<input type="number" id="phoneNumber" name="phone-number" value="">
-						  <label for="phoneNumber">Phone number</label>
-	          </div>
+						<span class="modal-close">X</span>
 					</div>
 				</div>
+				<div class="row">
+					<p>You are booking at</p>
+					<h6 id="formRestaurant"><strong>HipsterCafegtería</strong></h6>
+					<div class="valign-wrapper">
+						<img src="../img/arrow.png" alt="arrow">
+						<p><small><span id="formDistance"></span> km away</small></p>
+						<img src="../img/ranking.png" alt="raking">
+						<p><small>8.0 Rating</small></p>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<form id="reservationForm" type="submit">
+
+						<div class="input-field col s6 m12">
+							<h5>When?</h5>
+							<p>Day</p>
+							<input type="text" class="datepicker validate" id="reservationDay" required>
+							<label for="reservationDay"></label>
+						</div>
+						<div class="input-field col s6 m12">
+							<p>Hour</p>
+							<input type="text" class="timepicker validate" id="reservationHour" required>
+							<label for="reservationHour"></label>
+						</div>
+						<div class="input-field col s6 m12">
+							<p>How many seats?</p>
+							<input type="number" id="userSeats" class="validate" required>
+							<label for="userSeats"></label>
+						</div>
+				</div>
+			</div>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<h5>Who?</h5>
+					<div class="input-field col s6 m12">
+						<p>Name</p>
+						<input type="text" id="userName" name="name" value="" class="validate" required>
+						<label for="userName"></label>
+					</div>
+					<div class="input-field col s6 m12">
+						<p>Email</p>
+						<input type="email" id="userEmail" name="email" value="" class="validate" required>
+						<label for="userEmail"></label>
+					</div>
+					<div class="input-field col s6 m12">
+						<p>Phone number</p>
+						<input type="number" id="phoneNumber" name="phone-number" value="" class="validate" required>
+						<label for="phoneNumber"></label>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Confirm</a>
+			<button type="submit" name="button">Confirm</button>
 		</div>
-      </form>
+		</form>
 	</div>
 	<!-- Modal confirmation -->
 	<div id="modal2" class="modal">
