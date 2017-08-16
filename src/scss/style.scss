@@ -18,10 +18,37 @@ nav {
 }
 
 .banner {
-	background-image: url(../img/banner_home.png);
-	height: 50vh;
-	width: 100%;
+	background-color: #FDE23B;
 	max-width: 100%;
-	background-size: cover;
+	background-repeat: no-repeat;
 	background-position: bottom;
+	display: flex;
+	justify-content: center;
+}
+
+.map {
+	width: 100vw;
+	height: 30%;
+	position: relative;
+	&__span{
+		border-radius: 2rem;
+		-moz-border-radius: 2rem;
+		-webkit-border-radius: 2rem;
+		border: 2px solid #000000 ;
+		top: 50%;
+		left: 50%;
+		width: 5rem;
+		background-color: #FDE23B;
+		&--img{
+			width: 2rem;
+		}
+	}
+}
+
+.btn {
+	background-color: #FDE23B;
+	color: #000;
+	border-radius: 5%;
+	display: flex;
+	align-items: center;
 }

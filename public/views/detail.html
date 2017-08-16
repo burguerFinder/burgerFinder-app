@@ -10,9 +10,59 @@
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
+
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<h6 class="black-text"><strong>BurgerFinder</strong></h6>
+			</div>
+		</nav>
+	</header>
+
+	<div class="map">
+		<p class="map__span center-align"><img src="../img/icon_hambur.png" alt="icon_hamb" class="responsive-img map__span--img">8.0</p>
+	</div>
+
+	<section class="container">
+		<div class="row">
+			<div class="col s7">
+				<h6>Hipstercafeteria</h6>
+				<div class="valign-wrapper">
+					<img src="../img/arrow.png" alt="arrow" class="responsive-img">
+					<p><small>2 km away </small> &nbsp;<a href="#"> Get directions</a></p>
+				</div>
+			</div>
+
+			<div class="col s5 m2">
+				<p><img src="../img/person.png" alt="person" class="responsive-img">10</p>
+				<p><small>Seats available</small></p>
+			</div>
+
+			<div class="col m3">
+			<a class="waves-effect waves-light btn modal-trigger right hide-on-small-only" href="#modal1">Reserve Seats</a>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s10 offset-s1">
+				<p id="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, doloribus qui ullam necessitatibus deleniti architecto odit eum ad tempora, vitae porro assumenda magni. Voluptatem cum assumenda deleniti nostrum voluptas.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s8 offset-s2">
+			<a class="waves-effect waves-light btn modal-trigger right hide-on-small-only" href="#modal1">Reserve Seats</a>
+			</div>
+		</div>
+
+
+
+	</section>
+
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoGSs-Ysz5kXqz3d4dXmzi62VPD7lQgYU"></script>
 		<script src="../js/app-functions.js"></script>
 		<script src="../js/app-detail.js"></script>
 	</body>
