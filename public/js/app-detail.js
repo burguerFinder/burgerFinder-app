@@ -4,7 +4,7 @@ var urlBurger = "https://itexico-laboratoria.azurewebsites.net/api/v1/Places/" +
 if(burger_id){
 	console.log("El burger id es:"+ burger_id);
 }
-var adressBurger =[
+var addressBurger =[
 	{
 		"lat": 19.4660768, 
 		"lng": -99.1865509,
@@ -24,7 +24,7 @@ var adressBurger =[
 
 
 var loadPage = function () {
-	
+
 	currentDirection();
 	showBurger();
 };
@@ -57,10 +57,10 @@ var showMap = function (coords) {
 var showBurger = function (){
 	var id = burger_id-1;
 	var coords = {
-		lat: adressBurger[id].lat,
-		lng: adressBurger[id].lng
+		lat: addressBurger[id].lat,
+		lng: addressBurger[id].lng
 	};
-
+	$("#get-directions").attr("href", addressBurger[id].link);
 	showMap(coords);
 };
 
