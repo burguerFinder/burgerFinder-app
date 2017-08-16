@@ -5,6 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Burger Finder</title>
+		<meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+		<meta property="og:type"          content="website" />
+		<meta property="og:title"         content="Your Website Title" />
+		<meta property="og:description"   content="Your description" />
+		<meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
 		<link rel="stylesheet" href="../css/normalize.css">
 		<link rel="stylesheet" href="../css/style.css">
@@ -24,10 +29,10 @@
 		<section class="container">
 			<div class="row">
 				<div class="col s7">
-					<h6 id="name"></h6>
+					<h6 id="name">Happy Burger</h6>
 					<div class="valign-wrapper">
 						<img src="../img/arrow.png" alt="arrow" class="responsive-img">
-						<p><small><span id="distance"></span> km away </small> &nbsp; <a href="" target="_blank"> Get directions</a></p>
+						<p><small><span id="distance"></span> km away </small> &nbsp;<a href="" target="_blank"> Get directions</a></p>
 					</div>
 				</div>
 
@@ -53,75 +58,9 @@
 				</div>
 			</div>
 			<h4>Photos</h4>
-			<div class="row" id="photos">
-
-			</div>
+			<div class="row" id="photos"></div>
 		</section>
 
-		<!-- Modal reservation -->
-		<div id="modal1" class="modal">
-			<div class="modal-content">
-				<div class="container">
-					<div class="row">
-						<div class="col m6 s10 offset-m3 offset-s1">
-							<div class="row">
-								<form class="col s12">
-									<div class="row">
-										<div class="input-field col s12">
-											<h5>Nombre del Restaurante: <span id="nombre-restaurante"></span></h5>
-											<h6>Distancia: <span id="distancia-restaurante"></span></h6>
-											<h6>Calificacion del lugar: <span id="calificacion-restaurante"></span></h6>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s6">
-											<input type="text" class="datepicker" id="dia" required>
-											<label for="Dia">Dia</label>
-										</div>
-										<div class="input-field col s6">
-											<input type="text" class="timepicker validate" id="hora" required>
-											<label for="Dia">Hora</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s12">
-											<input id="personas-form" type="number" class="validate" required>
-											<label for="personas-form" >Numero de Personas</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s12">
-											<input id="nombre-form" type="text" class="validate" required>
-											<label for="nombre-form" >Nombre</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s12">
-											<input id="correo-form" type="email" class="validate" required>
-											<label for="correo-form" data-error="Correo no valido">Correo</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="input-field col s12">
-											<input id="tel-form" type="tel" class="validate" pattern="[0-9]{10}" required>
-											<label for="tel-form" data-error="Telefono no valido" >Telefono</label>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col s6 offset-s3">
-											<button id="btn-form" class="btn orange accent-3 waves-effect waves-light" disabled><a href="confirm.html">Confirmar Reservación</a></button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Reservar</a>
-			</div>
-		</div>
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoGSs-Ysz5kXqz3d4dXmzi62VPD7lQgYU"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
