@@ -1,5 +1,8 @@
+@import "variables";
+@import "mixin";
+
 .splash {
-	background-color: #FDE23B;
+	background-color: $color-yellow;
 }
 
 .logo-splash{
@@ -12,13 +15,13 @@
 }
 
 nav {
-	background-color: #FDE23B;
+	background-color: $color-yellow;
 	display: flex;
 	align-items: center;
 }
 
 .banner {
-	background-color: #FDE23B;
+	background-color: $color-yellow;
 	max-width: 100%;
 	background-repeat: no-repeat;
 	background-position: bottom;
@@ -27,8 +30,8 @@ nav {
 }
 
 .map {
-	width: 100vw;
-	height: 30%;
+	width: 100%;
+	height: 30vh;
 	position: relative;
 	&__span{
 		border-radius: 2rem;
@@ -38,7 +41,7 @@ nav {
 		top: 50%;
 		left: 50%;
 		width: 5rem;
-		background-color: #FDE23B;
+		background-color: $color-yellow;
 		&--img{
 			width: 2rem;
 		}
@@ -46,7 +49,7 @@ nav {
 }
 
 .btn {
-	background-color: #FDE23B;
+	background-color: $color-yellow;
 	color: #000;
 	border-radius: 5%;
 	display: flex;
