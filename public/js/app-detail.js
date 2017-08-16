@@ -6,12 +6,12 @@ if(burger_id){
 }
 var addressBurger =[
 	{
-		"lat": 19.4660768, 
+		"lat": 19.4660768,
 		"lng": -99.1865509,
 		"link": "https://www.google.com.mx/maps/place/19%C2%B027'57.9%22N+99%C2%B011'11.6%22W/@19.4660833,-99.1887443,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d19.4660768!4d-99.1865509"
 	},
-	{	
-		"lat": 19.4497338, 
+	{
+		"lat": 19.4497338,
 		"lng": -99.1600218,
 		"link": "https://www.google.com.mx/maps/dir//19.4497338,-99.1600218/@19.4496984,-99.1607138,18z/data=!4m8!1m7!3m6!1s0x0:0x0!2zMTnCsDI2JzU5LjAiTiA5OcKwMDknMzYuMSJX!3b1!8m2!3d19.4497338!4d-99.1600218"
 	},
@@ -22,6 +22,9 @@ var addressBurger =[
 	}
 ];
 
+var restaurantName = $("#formRestaurant");
+var restaurantDistance = $("#formDistance");
+var restaurantConfirmName = $("#restaurant-confirm-name");
 
 var loadPage = function () {
 
@@ -39,7 +42,7 @@ var currentDirection = function (){
 
 var viewPosition = function (position){
 	var coords= {
-		lat: position.coords.latitude, 
+		lat: position.coords.latitude,
 		lng: position.coords.longitude
 	};
 
@@ -78,13 +81,16 @@ var showDetail = function (response) {
 	$("#distance").text(burgerDistance);
 	$("#seats").text(burgerPlaces);
 	$("#description").text(burgerDescription);
-	burgerPhotos.forEach(showPhotos)
+	restaurantName.text(burgerName);
+	restaurantDistance.text(burgerDistance);
+	burgerPhotos.forEach(showPhotos);
+	restaurantConfirmName.text(burgerName);
 };
 
 var templateDetailFinal ="";
 var templateDetail = '<div class="col s12 m6">' +
 		'<img src="../img/__img1__" alt="photo-*__index__*">' +
-		'</div>' 
+		'</div>'
 
 
 var showPhotos = function (burgerPhoto, index){
