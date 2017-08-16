@@ -82,6 +82,7 @@
 				<div class="row">
 					<p>You are booking at</p>
 					<h6 ><strong id="formRestaurant"></strong></h6>
+
 					<div class="valign-wrapper">
 						<img src="../img/arrow.png" alt="arrow">
 						<p><small><span id="formDistance"></span> km away</small></p>
@@ -101,7 +102,7 @@
 
 							<div class="row">
 								<p>How many seats?</p>
-								<input type="number" id="userSeats" class="validate" required>
+								<input type="number" id="userSeats" class="validate" min="1" max="15" required>
 							</div>
 						</div>
 				</div>
