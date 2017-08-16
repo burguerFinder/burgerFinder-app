@@ -1,5 +1,5 @@
-var burger_id = getParameterByName('burger_id');
-var urlBurger = "https://itexico-laboratoria.azurewebsites.net/api/v1/Places" + burger_id;
+var burger_id = parseInt(getParameterByName('burger_id'));
+var urlBurger = "https://itexico-laboratoria.azurewebsites.net/api/v1/Places/" + burger_id;
 
 if(burger_id){
 	console.log("El burger id es:"+ burger_id);
@@ -50,15 +50,45 @@ var showMap = function (coords) {
 	});
 }
 var showBurger = function (){
-	
+	var id = burger_id-1;
 	var coords = {
-		lat: adressBurger[burger_id-1].lat,
-		lng: adressBurger[burger_id-1].lng
+		lat: adressBurger[id].lat,
+		lng: adressBurger[id].lng
 	};
 	showMap(coords);
 };
 
-fetch(urlBurger).then
+fetch(urlBurger)
+	.then(
+	function(response) {
+		if (response.status !== 200) {
+			console.log('Looks like there was a problem. Status Code: ' +
+									response.status);
+			return;
+		}
+		return response.json();
+	})
+	.then(
+	function(response){
+		var burgerDescription = response.Description;
+		var burgerDistance = response.Distance;
+		var burgerMainImg = response.MainImage;
+		var burgerName = response.Name;
+		var burgerPlaces = response.Places;
+
+		console.log(burgerDescription,burgerDistance,burgerMainImg, burgerName, burgerPlaces);
+
+		$("#name").text(burgerName);
+		$("#distance").text(burgerDistance);
+		$("#seats").text(burgerPlaces);
+		$("#description").text(burgerDescription);
+		
+
+	})
+	.catch(function(err) {
+	console.log('Fetch Error :-S sorry', err);
+});
+
 
 
 $(document).ready(loadPage);
