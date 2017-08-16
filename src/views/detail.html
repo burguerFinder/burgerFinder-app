@@ -15,51 +15,161 @@
 		<link rel="stylesheet" href="../css/style.css">
 	</head>
 	<body>
-
-		<header>
-			<nav>
-				<div class="nav-wrapper">
-					<h6 class="black-text"><strong>BurgerFinder</strong></h6>
+	<!-- javascript skd facebook -->
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.10&appId=673217066201363";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- javascript skd facebook -->
+	<header>
+		<nav>
+			<div class="nav-wrapper">
+				<h6 class="black-text"><strong>BurgerFinder</strong></h6>
+			</div>
+		</nav>
+	</header>
+	<div class="map">
+		<p class="map__span center-align"><img src="../img/icon_hambur.png" alt="icon_hamb" class="responsive-img map__span--img">8.0</p>
+	</div>
+	<section class="container">
+		<div class="row">
+			<div class="col s7">
+				<h6 id="name"></h6>
+				<div class="valign-wrapper">
+					<img src="../img/arrow.png" alt="arrow" class="responsive-img">
+					<p><small><span id="distance"></span> km away </small> &nbsp;<a href="#" id="get-direction"> Get directions</a></p>
 				</div>
-			</nav>
-		</header>
-		<div class="map">
-			<p class="map__span center-align"><img src="../img/icon_hambur.png" alt="icon_hamb" class="responsive-img map__span--img">8.0</p>
+			</div>
+
+			<div class="col s5 m2">
+				<p><img src="../img/person.png" alt="person" class="responsive-img"><span id="seats"></span></p>
+				<p><small>Seats available</small></p>
+			</div>
+
+			<div class="col m3">
+				<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-down" href="#modal1">Reserve Seats</a>
+			</div>
 		</div>
-		<section class="container">
-			<div class="row">
-				<div class="col s7">
-					<h6 id="name">Happy Burger</h6>
-					<div class="valign-wrapper">
-						<img src="../img/arrow.png" alt="arrow" class="responsive-img">
-						<p><small><span id="distance"></span> km away </small> &nbsp;<a href="" target="_blank" id="get-directions"> Get directions</a></p>
+
+		<div class="row">
+			<div class="col s10 offset-s1">
+				<p id="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae eaque, doloribus qui ullam necessitatibus deleniti architecto odit eum ad tempora, vitae porro assumenda magni. Voluptatem cum assumenda deleniti nostrum voluptas.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col s8 offset-s2">
+				<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-up" id="reservationButton" href="#modal1">Reserve Seats</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Modal reservation -->
+	<div id="modal1" class="modal">
+		<div class="modal-content">
+			<div class="container">
+				<div class="row">
+					<div class="right-align">
+						<span class="modal-close">X</span>
 					</div>
 				</div>
-
-				<div class="col s5 m2">
-					<p><img src="../img/person.png" alt="person" class="responsive-img"><span id="seats"></span></p>
-					<p><small>Seats available</small></p>
-				</div>
-
-				<div class="col m3">
-					<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-down" href="#modal1">Reserve Seats</a>
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col s10 offset-s1">
-					<p id="description"></p>
+				<div class="row">
+					<p>You are booking at</p>
+					<h6 id="formRestaurant"><strong>HipsterCafegtería</strong></h6>
+					<div class="valign-wrapper">
+						<img src="../img/arrow.png" alt="arrow">
+						<p><small><span id="formDistance"></span> km away</small></p>
+						<img src="../img/ranking.png" alt="raking">
+						<p><small>8.0 Rating</small></p>
+					</div>
 				</div>
 			</div>
-
-			<div class="row">
-				<div class="col s8 offset-s2">
-					<a class="waves-effect waves-light btn modal-trigger right hide-on-med-and-up" id="reservation" href="#modal1">Reserve Seats</a>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<h5>When?</h5>
+					<form id="reservationForm">
+						<div class="input-field col s12 m6">
+							<div class="row">
+								<p>Day</p>
+								<input type="text" class="datepicker validate" id="reservationDay" required>
+							</div>
+							<div class="row">
+								<p>Hour</p>
+								<input type="text" class="timepicker validate" id="reservationHour" required>
+							</div>
+							<div class="row">
+								<p>How many seats?</p>
+								<input type="number" id="userSeats" class="validate" required>
+							</div>
+						</div>
 				</div>
 			</div>
-			<h4>Photos</h4>
-			<div class="row" id="photos"></div>
-		</section>
+			<hr>
+			<div class="container">
+				<div class="row">
+					<h5>Who?</h5>
+					<div class="input-field col s12 m6">
+						<div class="row">
+							<p>Name</p>
+							<input type="text" id="userName" name="name" value="" class="validate" required>
+						</div>
+						<div class="row">
+							<p>Email</p>
+							<input type="email" id="userEmail" name="email" value="" class="validate" required>
+						</div>
+						<div class="row">
+							<p>Phone number</p>
+							<input type="number" id="phoneNumber" name="phone-number" value="" class="validate" required>
+						</div>
+						<div class="row">
+							<div class="col s8 offset-s2">
+								<a class="waves-effect waves-light btn modal-trigger right" id="confirmButton" href="#modal2">Confirm</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>
+	<!-- Modal confirmation -->
+	<div id="modal2" class="modal">
+   <div class="modal-content">
+     <div class="right-align">
+       <span class="modal-close">X</span>
+     </div>
+     <div class="center-align">
+       <img src="../img/ham.png" alt="hamburguer">
+     </div>
+     <div class="center-align">
+       <p>Your booking at "Restaurant" is confirmed!</p>
+     </div>
+     <div class="center-align">
+       <p><small>Remember to arrive within 15 min or you may lose your spot!</small></p>
+     </div>
+     <div class="center-align">
+       <h6><small>Tell your friends!</small></h6>
+     </div>
+		 <div class="center-align">
+			 <!-- Your share button code Facebook-->
+			 <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-size="large" data-mobile-iframe="true">
+					 <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">
+					 	Compartir
+				 	</a>
+			 </div>
+			 <!-- shared button twitter -->
+			 <a href="https://twitter.com/share" class="twitter-share-button" data-text="Mira mi reservación!!!" data-via="burgerFinder" data-size="large" data-hashtags="burgerFinderMX">
+				 Tweet
+			 </a>
+			 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+		 </div>
+   </div>
+ </div>
 
 		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoGSs-Ysz5kXqz3d4dXmzi62VPD7lQgYU"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
